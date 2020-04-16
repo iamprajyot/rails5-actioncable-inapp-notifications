@@ -8,12 +8,13 @@ class Users::PasswordsController < Devise::PasswordsController
 
   # POST /resource/password
   def create
-    self.resource = resource_class.new
-    if verify_recaptcha(model: resource) 
-      super
-    else
-      render 'new'
-    end
+    super
+    # self.resource = resource_class.new
+    # if verify_recaptcha(model: resource) 
+    #   super
+    # else
+    #   render 'new'
+    # end
   end
 
   # GET /resource/password/edit?reset_password_token=abcdef

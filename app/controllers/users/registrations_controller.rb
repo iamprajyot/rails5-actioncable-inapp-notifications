@@ -14,11 +14,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
     ## To build the resource
     build_resource(sign_up_params)
     ## Verifying Captcha
-    if verify_recaptcha(model: resource) 
-      super
-    else
-      render 'new'
-    end
+    super
+    # if verify_recaptcha(model: resource) 
+    #   super
+    # else
+    #   render 'new'
+    # end
   end
 
   # GET /resource/edit

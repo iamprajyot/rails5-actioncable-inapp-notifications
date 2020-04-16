@@ -8,12 +8,13 @@ class Users::ConfirmationsController < Devise::ConfirmationsController
 
   # POST /resource/confirmation
   def create
-    self.resource = resource_class.new
-    if verify_recaptcha(model: resource) 
-      super
-    else
-      render 'new'
-    end
+    super
+    # self.resource = resource_class.new
+    # if verify_recaptcha(model: resource) 
+    #   super
+    # else
+    #   render 'new'
+    # end
   end
 
   # GET /resource/confirmation?confirmation_token=abcdef
