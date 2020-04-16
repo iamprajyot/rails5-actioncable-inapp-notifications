@@ -1,10 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Highlights : Rails 5 + Devise + Bootstrap 4 + ActionCable + DelayedJob
 
-Highlights : Rails 5 + Devise + Bootstrap 4 + CanCanCan + Recaptcha
-
-1. Add respective secrets in .env file, refer .env.sample file
-2. bundle install
-3. start server
+1. Setup Redis on machine
+2. Add redis to gemfile
+3. Update database.yml file as per your configuration
+4. bundle install
+5. start the server `rails s`
+6. start the worker `bin/delayed_job start`
